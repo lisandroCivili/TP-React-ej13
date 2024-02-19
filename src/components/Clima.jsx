@@ -6,12 +6,13 @@ const Clima = ({climas}) => {
             {
             climas.map((clima, index)=>(
 
-                <Card className='clima text-center' key={index}>
+                <Card className='clima text-center mt-3' key={index}>
                     <Card.Body className='cuerpoclima'>
                         <Card.Title>{clima.name}</Card.Title>
-                        <Card.Text></Card.Text>
+                        <Card.Text>Temperatura actual: {clima.main.temp}°</Card.Text>
+                        <Card.Text>Con {clima.weather[0].description}</Card.Text>
+                        <Card.Text>Y una humedad de {clima.main.humidity}</Card.Text>
                     </Card.Body>
-                    <a href='#' className="btn btn-primary w-50 mb-3 align-self-center">Ir a la clima</a>
                 </Card>      
             )
             )
