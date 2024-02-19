@@ -27,7 +27,7 @@ const Formulario = () => {
       setClimas([climasDatos]);
       console.log(climasDatos);
     } catch (error) {
-      console.error("Error al consultar la API:", error);
+      alert("No se encuentra la ubicacion ingresada")
     }
   };
 
